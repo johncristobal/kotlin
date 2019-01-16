@@ -11,6 +11,7 @@ import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_navigation.*
 import kotlinx.android.synthetic.main.app_bar_navigation.*
 import miituo.com.kotlincourse.R
+import miituo.com.kotlincourse.navigation.DBaseFragment.SecondFragment
 
 class NavigationActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -47,7 +48,7 @@ class NavigationActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.navigation, menu)
+        //menuInflater.inflate(R.menu.navigation, menu)
         return true
     }
 
@@ -69,7 +70,9 @@ class NavigationActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
                 supportFragmentManager.beginTransaction().replace(R.id.container,FirstFragment()).commit()
             }
             R.id.nav_gallery -> {
-                supportFragmentManager.beginTransaction().replace(R.id.container,SecondFragment()).commit()
+                supportFragmentManager.beginTransaction().replace(R.id.container,
+                    SecondFragment()
+                ).commit()
 
             }
             R.id.nav_slideshow -> {
