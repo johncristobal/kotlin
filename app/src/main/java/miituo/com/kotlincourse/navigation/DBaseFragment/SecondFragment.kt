@@ -40,7 +40,6 @@ class SecondFragment : Fragment() {
         listaNotas.add(Notas(4,"Titulo","Descripcion"))*/
 
         query("%")
-
     }
 
     override fun onResume() {
