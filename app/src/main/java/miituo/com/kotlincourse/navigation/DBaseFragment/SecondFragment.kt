@@ -155,6 +155,15 @@ class SecondFragment : Fragment() {
 
                 query("%")
             }
+
+            holder.imageupdate.setOnClickListener{
+                val intent = Intent(activity!!,AddActivity::class.java)
+                intent.putExtra("notaid",notas[position].notaId)
+                intent.putExtra("titulo",notas[position].titulo)
+                intent.putExtra("descripcion",notas[position].description)
+
+                startActivity(intent)
+            }
         }
 
     }
@@ -166,6 +175,7 @@ class SecondFragment : Fragment() {
         val description = view.textViewContenido
 
         val imageborrar = view.imageViewDelete
+        val imageupdate = view.imageViewupdate
     }
 
 
