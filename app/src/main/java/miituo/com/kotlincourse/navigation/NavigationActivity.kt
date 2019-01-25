@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_navigation.*
 import kotlinx.android.synthetic.main.app_bar_navigation.*
 import miituo.com.kotlincourse.R
 import miituo.com.kotlincourse.navigation.DBaseFragment.SecondFragment
+import miituo.com.kotlincourse.navigation.TabFragment.ThirdFragment
 
 class NavigationActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -76,7 +77,7 @@ class NavigationActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
 
             }
             R.id.nav_slideshow -> {
-
+                supportFragmentManager.beginTransaction().replace(R.id.container,ThirdFragment()).commit()
             }
             R.id.nav_manage -> {
 

@@ -74,4 +74,9 @@ class DBManager{
         val contador = sqlDB!!.delete(dbTabla,selection,selectionArgs)
         return contador
     }
+
+    fun actualizar(values: ContentValues, selection: String, selectionargs: Array<String>):Int {
+        val contador = sqlDB!!.update(dbTabla,values, selection,selectionargs)
+        return contador
+    }
 }
